@@ -20,29 +20,29 @@ The repository is intentionally organized around a **baseline-first engineering 
 
 ## Architecture
 
-![Implemented Multi-PDF RAG architecture](../images/rag_baseline_architecture.png)
+![Implemented Multi-PDF RAG architecture](images/rag_baseline_architecture.png)
 
-### Baseline flow
+### Baseline Flow
 
 ```text
 Multiple PDFs
-      ↓
+     ↓
 PyPDFLoader
-      ↓
+     ↓
 File + page metadata
-      ↓
+     ↓
 Recursive chunking
-      ↓
+     ↓
 OpenAI embeddings
-      ↓
+     ↓
 FAISS
-      ↓
+     ↓
 Semantic retrieval
-      ↓
+     ↓
 Grounded prompt
-      ↓
+     ↓
 Chat model
-      ↓
+     ↓
 Answer + file/page sources
 ```
 
@@ -50,29 +50,29 @@ Answer + file/page sources
 
 ### Core RAG
 
-1. [RAG Fundamentals](01_RAG_Fundamentals.md)
-2. [RAG Architecture](02_RAG_Architecture.md)
-3. [RAG Types](03_RAG_Types.md)
+1. [RAG Fundamentals](docs/01_RAG_Fundamentals.md)
+2. [RAG Architecture](docs/02_RAG_Architecture.md)
+3. [RAG Types](docs/03_RAG_Types.md)
 
 ### Advanced Retrieval Strategies
 
-4. [Hybrid Retrieval](04_Hybrid_Retrieval.md)
-5. [BM25 and Reranking](05_BM25_and_Reranking.md)
-6. [Fusion RAG](06_Fusion_RAG.md)
-7. [Self-RAG and Corrective RAG](07_Self_RAG_and_Corrective_RAG.md)
+4. [Hybrid Retrieval](docs/04_Hybrid_Retrieval.md)
+5. [BM25 and Reranking](docs/05_BM25_and_Reranking.md)
+6. [Fusion RAG](docs/06_Fusion_RAG.md)
+7. [Self-RAG and Corrective RAG](docs/07_Self_RAG_and_Corrective_RAG.md)
 
 ### Evaluation and Project Findings
 
-8. [LangSmith and RAG Evaluation](08_LangSmith_and_RAG_Evaluation.md)
-9. [Project Implementation and Evaluation](09_Project_Implementation_and_Evaluation.md)
+8. [LangSmith and RAG Evaluation](docs/08_LangSmith_and_RAG_Evaluation.md)
+9. [Project Implementation and Evaluation](docs/09_Project_Implementation_and_Evaluation.md)
 
 ## Project Evidence
 
-- `../images/rag_baseline_architecture.png` — implemented architecture
-- `../images/rag_evaluation_workflow.png` — evaluation workflow
-- `../images/cross_document_retrieval_observation.png` — cross-document retrieval observation
-- `multipdf_rag_output.pdf` — Streamlit output captured from the working application
-- `experiments/Naive_RAG_retrieval.py` — earlier baseline experiment retained for comparison
+- `images/rag_baseline_architecture.png` — implemented architecture
+- `images/rag_evaluation_workflow.png` — evaluation workflow
+- `images/cross_document_retrieval_observation.png` — cross-document retrieval observation
+- `docs/multipdf_rag_output.pdf` — Streamlit output captured from the working application
+- `docs/experiments/Naive_RAG_retrieval.py` — earlier baseline experiment retained for comparison
 
 ## Key Engineering Findings
 
@@ -143,16 +143,19 @@ rag-engine/
 ├── images/
 │   ├── rag_baseline_architecture.png
 │   ├── rag_evaluation_workflow.png
-│   └── cross_document_retrieval_observation.png
+│   ├── cross_document_retrieval_observation.png
+│   ├── rag-architecture.png
+│   └── rag-techniques-overview.png
 ├── rag_app.py
 ├── requirements.txt
-├── .env
-└── .gitignore
+├── .gitignore
+└── .streamlit/
+    └── config.toml
 ```
 
 > Keep secrets such as `.env` out of GitHub. Commit only the environment-variable template if one is needed.
 
-## Architecture
+## RAG System Architecture
 
 ![RAG System Architecture](images/rag-architecture.png)
 
