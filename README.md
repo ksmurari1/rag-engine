@@ -151,3 +151,11 @@ rag-engine/
 ```
 
 > Keep secrets such as `.env` out of GitHub. Commit only the environment-variable template if one is needed.
+
+## Architecture
+
+![RAG System Architecture](images/rag-architecture.png)
+
+## RAG Retrieval Techniques
+
+![RAG Techniques Overview](images/rag-techniques-overview.png)
